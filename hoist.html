@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hoist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <script>
+        //-----scope variable--------
+        var a = "Hi";
+        function myFunctionSay() {
+            var a = "Bye";
+            console.log(a);
+        }
+        myFunctionSay();
+        console.log(a);
+
+        //----hoist variable------------
+        function myFunction (num) {
+            console.log(value);
+            if (num > 10) {
+                var value = num * 10;
+            } else {
+                console.log(value);
+            }
+        }
+        myFunction(11);
+
+        //----hoist function-----------
+        myHoist();
+        function myHoist () {
+            console.log("Hoisted");
+        }
+        myHoist();
+    </script>
+</body>
+</html>
