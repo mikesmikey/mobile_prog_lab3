@@ -11,8 +11,11 @@
 <body>
     <input type="text" id= "firstnumber" placeholder="put firstnumber">
     <input type="text" id= "secondnumber" placeholder="put secondnumber">
-    
+    <br>
     <button id="sumbutton" onclick="getSum()">+</button>
+    <button id="subtractbutton" onclick="getSubstract()">-</button>
+    <button id="multipybutton" onclick="getMultipy()">*</button>
+    <button id="dividebutton" onclick="getDivide()">/</button>
 
     <div id="output">
         
@@ -25,6 +28,21 @@
 
         function getSum() {
             let sum = parseInt(first.value) + parseInt(second.value);
+            showResult(sum);
+        }
+
+        function getSubstract() {
+            let sum = parseInt(first.value) - parseInt(second.value);
+            showResult(sum);
+        }
+
+        function getMultipy() {
+            let sum = parseInt(first.value) * parseInt(second.value);
+            showResult(sum);
+        }
+
+        function getDivide() {
+            let sum = parseInt(first.value) / parseInt(second.value);
             showResult(sum);
         }
 
